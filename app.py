@@ -6,6 +6,9 @@ app = flask.Flask(__name__, template_folder='./templates', static_folder='./stat
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+string = ""
+with open("var/www/bingxuhu_server/logs/accessloc.log") as logfile:
+    string = logfile.read()
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -62,6 +65,10 @@ def update(id):
             return 'There was issue updating.'
     else:
         return flask.render_template('/task-master/update.html',task=task)
+
+@app.route("/access")
+def access():
+    return string
 
 if __name__ == "__main__":
     app.run(debug=True, threaded=False)

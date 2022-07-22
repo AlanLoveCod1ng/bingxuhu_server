@@ -2,9 +2,28 @@
 
 {% block head %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+<title>Bingxu Hu</title>
 {% endblock %}
 
 {% block body%}
-<h2>Oops! Website not ready!</h2>
-<p>Welcome to Bingxu's Website! This is still under construction!</p>
+<div class="flex-align">
+    <div class="profile">
+        <img src="{{ url_for('static', filename='img/profile.png') }}">
+        <h2>Bingxu (Alan) Hu</h2>
+        <h3>Undergraduate Student</h3>
+        <h3 ><a href="https://www.cs.wisc.edu/">Department of Computer Science</a></h3>
+        <h3 ><a href="https://www.wisc.edu/">University of Wisconsin-Madison</a></h3>
+        <nav>
+            <ul>
+                <li><a class="fa fa-github" href="https://github.com/AlanLoveCod1ng"> Github</a></li>
+                <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/bingxu-hu-64768b22b/"> LinkedIn</a></li>
+                <li><a class="fa fa-reddit" href="https://www.reddit.com/user/AlanHu233"> Reddit</a></li>
+                <li><a class="fa fa-leetcode" href="https://leetcode.com/loliAlanie/"><span class="iconify" data-icon="simple-icons:leetcode"></span> LeetCode</a></li>
+                <li><a class="fa fa-envelope" href="mailto:bhu62@wisc.edu"> E-mail</a></li>
+            </ul>
+        </nav> 
+    </div>
+</div>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 {% endblock %}

@@ -1,0 +1,47 @@
+.flex-align{
+    display: flex;
+}
+.profile{
+    max-width: 500px;
+    justify-content: center;
+}
+.profile img{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50px;
+}
+.profile h3{
+    line-height: 50%;
+    height: 20px;
+    font-style: italic;
+}
+.profile a{
+    color: inherit;
+    text-decoration: inherit;
+    transition: 0.3s;
+}
+.profile a:hover{
+    font-size: 105%;
+    font-style: bold;
+}
+.profile nav{
+    padding: 0;
+}
+.profile ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+.profile ul li{
+    line-height: 200%;
+}
+.profile nav a:hover{
+    size: 110%;
+    font-size: 120%;
+    text-shadow: 1px 1px 5px;
+}
+.profile span:hover{
+    size: 110%;
+    font-size: 120%;
+    text-shadow: 1px 1px 5px;
+    box-shadow: 1px 1px 5px;
+}
