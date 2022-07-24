@@ -6,9 +6,9 @@ app = flask.Flask(__name__, template_folder='./templates', static_folder='./stat
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
-string = ""
-with open("var/www/bingxuhu_server/logs/accessloc.log") as logfile:
-    string = logfile.read()
+# string = ""
+# with open("var/www/bingxuhu_server/logs/accessloc.log") as logfile:
+#     string = logfile.read()
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -23,8 +23,16 @@ class Todo(db.Model):
 
 @app.route('/')
 def home():
+    print(app.root_path)
     return flask.render_template('index.html')
 
+@app.route('/home')
+def profile():
+    return flask.render_template('home.html')
+
+@app.route('/resume')
+def resume():
+    return flask.send_file('./static/archive/Bingxu_resume.pdf')
 
 @app.route("/task-master",methods=['POST','GET'])
 def task_master():
@@ -66,9 +74,9 @@ def update(id):
     else:
         return flask.render_template('/task-master/update.html',task=task)
 
-@app.route("/access")
-def access():
-    return string
+# @app.route("/access")
+# def access():
+#     return string
 
 if __name__ == "__main__":
     app.run(debug=True, threaded=False)

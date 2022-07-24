@@ -1,29 +1,31 @@
-{% extends 'base.html' %}
-
-{% block head %}
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
-<title>Bingxu Hu</title>
-{% endblock %}
-
-{% block body%}
-<div class="flex-align">
-    <div class="profile">
-        <img src="{{ url_for('static', filename='img/profile.png') }}">
-        <h2>Bingxu (Alan) Hu</h2>
-        <h3>Undergraduate Student</h3>
-        <h3 ><a href="https://www.cs.wisc.edu/">Department of Computer Science</a></h3>
-        <h3 ><a href="https://www.wisc.edu/">University of Wisconsin-Madison</a></h3>
-        <nav>
-            <ul>
-                <li><a class="fa fa-github" href="https://github.com/AlanLoveCod1ng"> Github</a></li>
-                <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/bingxu-hu-64768b22b/"> LinkedIn</a></li>
-                <li><a class="fa fa-reddit" href="https://www.reddit.com/user/AlanHu233"> Reddit</a></li>
-                <li><a class="fa fa-leetcode" href="https://leetcode.com/loliAlanie/"><span class="iconify" data-icon="simple-icons:leetcode"></span> LeetCode</a></li>
-                <li><a class="fa fa-envelope" href="mailto:bhu62@wisc.edu"> E-mail</a></li>
-            </ul>
-        </nav> 
-    </div>
-</div>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingxu Hu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="blur-filter"></div>
+    <div id="bg"></div>
+    <main id="main">
+      <h1>Bingxu Hu</h1>
+      <div id="content">
+        <a href="mailto:bhu62@wisc.edu"><button id="email"><i class="fa fa-envelope" style="font-size: 18px;"></i> Email</button></a>
+        <a href="/home"><button id="home"><i class="fa fa-home" style="font-size: 18px;"></i> Home</button></a>
+        <a href="https://github.com/AlanLoveCod1ng"><button id="github"><i class="fa fa-github" style="font-size: 20px;"></i> Github</button></a>
+        <a href="https://www.linkedin.com/in/bingxu-hu-64768b22b/"><button id="linkedin"><i class="fa fa-linkedin-square" style="font-size: 18px;"></i> Linkedin</button></a>
+        <a href="/resume"><button id="resume"><i class="fa fa-file" style="font-size: 18px;"></i> resume</button></a>
+      </div>
+    </main>
+  </body>
+  <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </html>
