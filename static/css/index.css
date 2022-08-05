@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 #bg{
-    background: url("https://images.unsplash.com/photo-1475947175089-3a98ee67944b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background: center url("https://images.unsplash.com/photo-1475947175089-3a98ee67944b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     height: 100%;
 }
 #blur-filter{
@@ -46,7 +46,6 @@ main:hover>h1{
 }
 div#content{
     margin-bottom: 10%;
-    height: 100px;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
     display: flex;
@@ -57,10 +56,11 @@ div#content{
 button{
     margin: 2rem 1.5rem;
     height: 3rem;
-    padding: 1rem;
+    width: 150px;
+    padding: auto;
     border: 2px solid white;
     background-color: rgba(255,255,255,1);
-    border-radius: 10%;
+    border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -92,4 +92,23 @@ div#content:hover{
 div#content:hover >a> button{
     margin: 2rem 2rem;
     opacity: 1;
+}
+@media (max-width:1000px) {
+    div#content{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    button{
+        margin: 0.5rem;
+    }
+    div#content:hover >a> button{
+        margin: 1rem;
+        opacity: 1;
+    }
+    #bg{
+        filter: blur(8px);
+    }
+}
+html, body {
+	overflow: hidden;
 }
