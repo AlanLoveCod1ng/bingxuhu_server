@@ -3,6 +3,9 @@
 }
 .flex-align{
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .profile{
     max-width: 500px;
