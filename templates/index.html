@@ -1,31 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bingxu Hu</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="blur-filter"></div>
-    <div id="bg"></div>
-    <main id="main">
-      <h1>Bingxu Hu</h1>
-      <div id="content">
-        <a href="mailto:bhu62@wisc.edu"><button id="email"><i class="fa fa-envelope" style="font-size: 18px;"></i> Email</button></a>
-        <a href="/home"><button id="home"><i class="fa fa-home" style="font-size: 18px;"></i> Home</button></a>
-        <a href="https://github.com/AlanLoveCod1ng"><button id="github"><i class="fa fa-github" style="font-size: 20px;"></i> Github</button></a>
-        <a href="https://www.linkedin.com/in/bingxu-hu-64768b22b/"><button id="linkedin"><i class="fa fa-linkedin-square" style="font-size: 18px;"></i> Linkedin</button></a>
-        <a href="https://docs.google.com/document/d/1JIRsqQT0TI_qXUxkFg2ZiBSxvgPhtnkAH16FB5Sialo/edit#"><button id="resume"><i class="fa fa-file" style="font-size: 18px;"></i> Resume</button></a>
-      </div>
-    </main>
-  </body>
-  <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </html>
+{% extends 'base.html' %}
+
+  {% block head %}
+<title>Bingxu Hu</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&family=Roboto&display=swap" rel="stylesheet">
+<title>Profile</title>
+{% endblock %}
+  {% block body%}
+<main id="main">
+    <h1>Bingxu Hu</h1>
+    <div id="content">
+        <a href="mailto:bhu62@wisc.edu">
+            <button id="email">
+                <i class="fa fa-envelope" style="font-size: 18px;"></i> Email
+            </button>
+        </a>
+        <a href="/home">
+            <button id="home">
+                <i class="fa fa-home" style="font-size: 18px;"></i> Home
+            </button>
+        </a>
+        <a href="https://github.com/AlanLoveCod1ng">
+            <button id="github">
+                <i class="fa fa-github" style="font-size: 20px;"></i> Github
+            </button>
+        </a>
+        <a href="https://www.linkedin.com/in/bingxu-hu-64768b22b/">
+            <button id="linkedin">
+                <i class="fa fa-linkedin-square" style="font-size: 18px;"></i> Linkedin
+            </button>
+        </a>
+        <a href="https://docs.google.com/document/d/1JIRsqQT0TI_qXUxkFg2ZiBSxvgPhtnkAH16FB5Sialo/edit#">
+            <button id="resume">
+                <i class="fa fa-file" style="font-size: 18px;"></i> Resume
+            </button>
+        </a>
+    </div>
+</main>
+<script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
