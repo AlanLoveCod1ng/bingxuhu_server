@@ -4,29 +4,5 @@ html{
 body{
     height: 100%;
     margin: 0;
-}
-#bg{
     background: center url("https://images.unsplash.com/photo-1475947175089-3a98ee67944b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    height: 100%;
 }
-#blur-filter{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-}
-.blur{
-    backdrop-filter: blur(5px);
-}
-#bg > *{
-    z-index: 2;
-}
-@media (max-width:1000px) {
-    #blur-filter{
-        backdrop-filter: blur(5px);
-    }
-}
-/* html, body {
-	overflow: hidden;
-} */

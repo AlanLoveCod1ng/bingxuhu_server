@@ -1,52 +1,55 @@
-.profile{
-    background-color: rgba(255, 255, 255, 0.7);
-}
 *{
     font-family: 'Montserrat', sans-serif;;
 }
-img{
+#blur-filter{
+    backdrop-filter: blur(5px);
+}
+.profile{
+    max-width: 500px;
+    justify-content: center;
+}
+.profile img{
     max-width: 100px;
     max-height: 100px;
     border-radius: 50px;
 }
-h3{
+.profile h3{
     font-weight: 400;
     font-size:1.2rem;
     line-height: 100%;
     font-style: italic;
     transition: 0.25s;
 }
-a{
+.profile a{
     color: inherit;
-    text-decoration: none;
+    text-decoration: inherit;
     transition: 0.3s;
 }
 
-h3.have-link:hover{
-    transform: translate(0px,-0.1rem);
+.profile h3.have-link:hover{
+    transform: translate(0px,-0.2rem);
     font-style: bold;
     text-shadow: 1px 1px 5px;
 }
-h3.have-link:hover a{
+.profile h3.have-link:hover a{
     text-shadow: 1px 1px 5px;
 }
-nav{
+.profile nav{
     padding: 0;
 }
-ul{
+.profile ul{
     list-style-type: none;
     padding-left: 10px;
 }
-ul li{
+.profile ul li{
     line-height: 200%;
 }
-nav a:hover{
-    text-decoration: none;
+.profile nav a:hover{
     size: 110%;
     font-size: 120%;
     text-shadow: 1px 1px 5px;
 }
-span:hover{
+.profile span:hover{
     size: 110%;
     font-size: 120%;
     text-shadow: 1px 1px 5px;
